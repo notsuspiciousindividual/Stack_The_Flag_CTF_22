@@ -1,6 +1,6 @@
 # Stack_The_Flag_CTF_22
 
-![STF 22 Flag Banner] (https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/blob/main/img/stf_banner.png)
+![STF 22 Flag Banner](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/blob/main/img/stf_banner.png)
 
 Friends and I decided to attend STFCTF (Stack The Flag Capture the Flag) after our 2 years mandatory break to learn and unrust. What is Stack the flag, well it is..
 

@@ -64,13 +64,14 @@ export const viewPosts = async () => {
 Looking through the sourcecode, there is no form of sanitization when it comes to posting. With that in mind, let's try it with a simple XSS. If it works, there'll be our foothole for this challenge.
 
 ```javascript
-<script>console.log</script>
+<script>console.log("test")</script>
 ```
 
 ![XSS FootHold](XSSFootHold.PNG)
 
-And it does work! Now withll our foothold, what can we do with it?
+![XSS Success](XSSSuccess.PNG)
 
+And it does work! Now with our foothold, what can we do with it?
 
 ## Exploitation
-
+During our enumeration, we understand that'll be a bot the crawls through the blog site itself. Hence our objective is to use XSS to steal the "cookie" of the admin which will hold our flag. 

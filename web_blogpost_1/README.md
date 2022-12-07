@@ -1,6 +1,6 @@
 # Web BlogPost
 
-![Blog Post Challenge][Challenge.PNG]
+![Blog Post Challenge][https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/blob/main/web_blogpost_1/Challenge.PNG]
 
 ## Summary
 
@@ -8,7 +8,7 @@ Blogpost is a easy web challenge that one of the challenges that took most of my
 
 ## Setting up the environment
 
-![When unzipped, there should be the docker environments to run][settingupchallenge.PNG]
+![When unzipped, there should be the docker environments to run][https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/blob/main/web_blogpost_1/settingupchallenge.PNG]
 
 The challenge developers were kind enough to create the environment for individuals to run on their local machine. To create the environment itself, you should have docker installed in your machine. Just a little google can help you (depending on your machine) but here was how I installed it; [Link](https://www.kali.org/docs/containers/installing-docker-on-kali/)
 
@@ -19,9 +19,10 @@ Playing around with the website and looking at the sourcecode, we have a rough u
 ```
 Goes to Homepage
 Login
-If no user in website, make user
-Go to Blog, server takes content from blog
-make own post etc
+	If no user in website
+		make user
+	Go to Blog, server takes content from blog
+	make own post etc
 ```
 
 Going through the sourcecodes itself, we also understand that there'll be a bot that actively crawls through the blogpost with the required cookie we have to steal in bot.js
@@ -56,5 +57,5 @@ export const viewPosts = async () => {
 ````
 
 ## Getting the foothold
-
+Looking through the sourcecode, there is no form of sanitization when it comes to posting 
 

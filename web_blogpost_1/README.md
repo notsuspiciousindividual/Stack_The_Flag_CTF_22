@@ -57,5 +57,20 @@ export const viewPosts = async () => {
 ````
 
 ## Getting the foothold
-Looking through the sourcecode, there is no form of sanitization when it comes to posting 
+
+![Form has no sanitisation][formsjsnosanisation.PNG]
+
+
+Looking through the sourcecode, there is no form of sanitization when it comes to posting. With that in mind, let's try it with a simple XSS. If it works, there'll be our foothole for this challenge.
+
+```javascript
+<script>console.log</script>
+```
+
+![XSS FootHold][XSSFootHold.PNG]
+
+And it does work! Now withll our foothold, what can we do with it?
+
+
+## Exploitation
 

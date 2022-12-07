@@ -1,6 +1,6 @@
 # Web BlogPost
 
-![Blog Post Challenge][https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/blob/main/web_blogpost_1/Challenge.PNG]
+![Blog Post Challenge](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/blob/main/web_blogpost_1/Challenge.PNG)
 
 ## Summary
 
@@ -8,7 +8,7 @@ Blogpost is a easy web challenge that one of the challenges that took most of my
 
 ## Setting up the environment
 
-![When unzipped, there should be the docker environments to run][https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/blob/main/web_blogpost_1/settingupchallenge.PNG]
+![When unzipped, there should be the docker environments to run](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/blob/main/web_blogpost_1/settingupchallenge.PNG)
 
 The challenge developers were kind enough to create the environment for individuals to run on their local machine. To create the environment itself, you should have docker installed in your machine. Just a little google can help you (depending on your machine) but here was how I installed it; [Link](https://www.kali.org/docs/containers/installing-docker-on-kali/)
 
@@ -58,7 +58,7 @@ export const viewPosts = async () => {
 
 ## Getting the foothold
 
-![Form has no sanitisation][formsjsnosanisation.PNG]
+![Form has no sanitisation](formsjsnosanisation.PNG)
 
 
 Looking through the sourcecode, there is no form of sanitization when it comes to posting. With that in mind, let's try it with a simple XSS. If it works, there'll be our foothole for this challenge.
@@ -67,7 +67,7 @@ Looking through the sourcecode, there is no form of sanitization when it comes t
 <script>console.log</script>
 ```
 
-![XSS FootHold][XSSFootHold.PNG]
+![XSS FootHold](XSSFootHold.PNG)
 
 And it does work! Now withll our foothold, what can we do with it?
 

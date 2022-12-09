@@ -11,8 +11,8 @@ Blogpost is a easy web challenge that one of the challenges that took most of my
 2. [Enumeration](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#setting-up-the-environment)
 3. [Foothold](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#setting-up-the-environment)
 4. [Exploitation](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#setting-up-the-environment)
-	1.[CSP]
-	2.[Using NGROK]
+	1.[CSP](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#what-is-csp-and-why-is-it-a-pain)
+	2.[Using NGROK](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#using-ngrok)
 
 ## Setting up the environment
 

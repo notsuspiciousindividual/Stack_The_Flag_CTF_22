@@ -11,8 +11,8 @@ Blogpost is a easy web challenge that one of the challenges that took most of my
 2. [Enumeration](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#setting-up-the-environment)
 3. [Foothold](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#setting-up-the-environment)
 4. [Exploitation](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#setting-up-the-environment)
-	1.[CSP](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#what-is-csp-and-why-is-it-a-pain)
-	2.[Using NGROK](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#using-ngrok)
+5. [CSP](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#what-is-csp-and-why-is-it-a-pain)
+6. [Using NGROK](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#using-ngrok)
 
 ## Setting up the environment
 
@@ -103,7 +103,7 @@ However, we encountered the next obstacle in the challenge. The challenge is equ
 
 ![CSP Shenanigans](img/CSPBlockage.PNG)
 
-### What is CSP? ~~and why is it a pain~~
+## What is CSP? ~~and why is it a pain~~
 
 > Content Security Policy ([CSP](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross-Site Scripting ([XSS](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting)) and data injection attacks. These attacks are used for everything from data theft, to site defacement, to malware distribution. [^2]
 
@@ -123,7 +123,7 @@ Hence with the mindset of "hey they probably misconfigured something", we can se
 
 It does work, now lets steal the bot's cookie
 
-### Using NGROK
+## Using NGROK
 One of the problems which I faced was getting the cookie itself. For some reason, I was only receiving my cookie rather than the bot's cookie. After thinkering around and accidentally solving Blogpost 2 (woops), I learn about [ngrok](https://ngrok.com/). The idea is being able to push localhost apps to the internet with a hostname easily. In this case, I'll be using it to receive the cookie instantly. Thanks John Hammond for the idea as well. [^5]
 
 Setting up ngrok, which will give us our forward hostname

